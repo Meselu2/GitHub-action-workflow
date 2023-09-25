@@ -19,4 +19,3 @@ jobs:
     steps:
       - name: build and test
         uses: ./.github/workflows/build-test.yml
-      -name:
