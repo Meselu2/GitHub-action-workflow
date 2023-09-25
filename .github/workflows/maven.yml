@@ -1,6 +1,6 @@
 name: Java CI with Maven
 
-on: pull_request
+on: workflow_call
 jobs:
   build_test:
     runs-on: ubuntu-latest
