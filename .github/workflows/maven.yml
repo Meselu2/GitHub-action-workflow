@@ -1,9 +1,22 @@
-name: Java CI with Maven
+name: common-workflow
 
-on: workflow_call
+on: 
+ workflow_call:
+  inputs:
+    app-name:
+      description: 'Application Name'
+      required: true
+      type: string
+    java-version:
+      description: 'java version'
+      required: false
+      type: string
+      default: '17'
+
 jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Build with Maven
-        run: echo hello world
+      - name: build and test
+        uses: ./.github/workflows/build-test.yml
+      -name:

@@ -1,0 +1,36 @@
+name: Java CI with Maven
+
+on: 
+ workflow_call:
+  inputs:
+    app-name:
+      description: 'Application Name'
+      required: true
+      type: string
+    java-version:
+      description: 'java version'
+      required: false
+      type: string
+      default: '17'
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth:0
+      - name: set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ inputs.java-version}}
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn clean install
+      # - name: Upload Github Build Artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: ${{input.app-name}}-build-artifact
+      #     path: build
