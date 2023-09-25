@@ -17,12 +17,14 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          repository: Meselu2/springapplication_demo_newman
-          token: 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
-          fetch-depth:0
+      - name: test
+        run: echo hello world
+      # - name: checkout
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: Meselu2/springapplication_demo_newman
+      #     token: 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
+      #     fetch-depth:0
       # - name: set up JDK
       #   uses: actions/setup-java@v3
       #   with:
