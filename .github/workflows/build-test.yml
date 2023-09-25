@@ -19,18 +19,18 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          repository: Meselu2/springapplication_demo_newman
-          token: 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
-          fetch-depth:0
-      - name: set up JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: ${{ inputs.java-version}}
-          distribution: 'temurin'
-          cache: maven
-      - name: Build with Maven
-        run: mvn clean install
+      #   with:
+      #     repository: Meselu2/springapplication_demo_newman
+      #     token: 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
+      #     fetch-depth:0
+      # - name: set up JDK
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: ${{ inputs.java-version}}
+      #     distribution: 'temurin'
+      #     cache: maven
+      # - name: Build with Maven
+      #   run: mvn clean install
       # - name: Upload Github Build Artifact
       #   uses: actions/upload-artifact@v2
       #   with:
