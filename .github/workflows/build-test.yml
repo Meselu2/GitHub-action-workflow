@@ -19,10 +19,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      #   with:
-      #     repository: Meselu2/springapplication_demo_newman
-      #     token: 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
-      #     fetch-depth:0
+        with:
+          repository: Meselu2/springapplication_demo_newman
+          token: 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
+          fetch-depth:0
       # - name: set up JDK
       #   uses: actions/setup-java@v3
       #   with:
