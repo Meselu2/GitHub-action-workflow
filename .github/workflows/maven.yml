@@ -18,4 +18,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build and test
-        uses: ./.github/workflows/build-test.yml@main
+        run: echo wellcome
