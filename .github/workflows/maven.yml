@@ -21,6 +21,6 @@ jobs:
         run: echo wellcome
       - name: checkout
         uses: actions/checkout@v3
-        with:
-          repository: Meselu2/springapplication_demo_newman
-          repo-token: ${{ secrets.REPO_TOKEN}}
+        # with:
+        #   repository: Meselu2/springapplication_demo_newman
+        #   repo-token: ${{ secrets.REPO_TOKEN}}
