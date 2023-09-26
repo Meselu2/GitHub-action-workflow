@@ -19,14 +19,18 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: set up JDK
-        uses: actions/setup-java@v3
+      - id: foo
+        uses: actions/hello-world-composite-action@v1
         with:
-          java-version: ${{ inputs.java-version}}
-          distribution: 'temurin'
-          cache: maven
-      - name: Build with Maven
-        run: mvn clean install
+          who-to-greet: 'Mona the Octocat'
+      # - name: set up JDK
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: ${{ inputs.java-version}}
+      #     distribution: 'temurin'
+      #     cache: maven
+      # - name: Build with Maven
+      #   run: mvn clean install
       # - name: maven build
       #   uses: ./.github/workflows/build-test.yml
         # with:
