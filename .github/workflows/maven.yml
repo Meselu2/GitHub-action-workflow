@@ -19,8 +19,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: maven build
-        uses: ./.github/workflows/build-test.yml
+      # - name: maven build
+      #   uses: ./.github/workflows/build-test.yml
         # with:
         #   repository: Meselu2/springapplication_demo_newman
         #   repo-token: ${{ secrets.REPO_TOKEN}}
