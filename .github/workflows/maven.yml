@@ -19,3 +19,7 @@ jobs:
     steps:
       - name: build and test
         run: echo wellcome
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          repository: Meselu2/springapplication_demo_newman
