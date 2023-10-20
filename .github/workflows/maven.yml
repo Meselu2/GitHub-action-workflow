@@ -12,6 +12,25 @@ on:
       required: false
       type: string
       default: '17'
+    run-sonar-scan:
+      description: 'Sonar scan'
+      required: false
+      type: boolean
+      default: true
+    run-static-scan:
+      description: 'static scan'
+      required: false
+      type: boolean
+      default: true
+    run-reload-test:
+      description: 'Reload performance test'
+      required: false
+      type: boolean
+      default: true
+    reload-test-scenario:
+      description: 'scenario name'
+      type: string
+      required: false
 
 jobs:
   build_test:
