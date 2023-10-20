@@ -12,25 +12,6 @@ on:
       required: false
       type: string
       default: '17'
-    run-sonar-scan:
-      description: 'Sonar scan'
-      required: false
-      type: boolean
-      default: true
-    run-static-scan:
-      description: 'static scan'
-      required: false
-      type: boolean
-      default: true
-    run-reload-test:
-      description: 'Reload performance test'
-      required: false
-      type: boolean
-      default: true
-    reload-test-scenario:
-      description: 'scenario name'
-      type: string
-      required: false
 
 jobs:
   build_test:
@@ -41,10 +22,7 @@ jobs:
          echo 'hello world'
          echo ${{inputs.app-name}}
          echo ${{inputs.java-version}}
-         echo ${{inputs.run-sonar-scan}}
-         echo ${{inputs.run-static-scan}}
-         echo ${{inputs.run-reload-test}}
-         echo ${{inputs.reload-test-scenario}}
+
          
 
       # - name: set up JDK
