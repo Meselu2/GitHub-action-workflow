@@ -37,7 +37,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        run: echo 'hello world'
+        run: |
+         echo 'hello world'
+         echo ${{inputs.app-name}}
+         echo ${{inputs.java-version}}
+         echo ${{inputs.run-sonar-scan}}
+         echo ${{inputs.run-static-scan}}
+         echo ${{inputs.run-reload-test}}
+         echo ${{inputs.reload-test-scenario}}
+         
 
       # - name: set up JDK
       #   uses: actions/setup-java@v3
