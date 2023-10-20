@@ -18,9 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
-      - id: foo
-        uses: ./.github/actions/build-test.yml@main
+        run: echo 'hello world'
 
       # - name: set up JDK
       #   uses: actions/setup-java@v3
